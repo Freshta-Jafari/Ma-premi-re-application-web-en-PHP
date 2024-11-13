@@ -1,5 +1,4 @@
 <?php
-// session_start();
 
 include 'traitement.php';
 
@@ -22,7 +21,6 @@ include 'traitement.php';
 </header>
 
 <h1>Récapitulatif des Produits</h1>
-
 <?php if (isset($_SESSION['message'])): ?>
     <div class="message <?php echo $_SESSION['message']['type']; ?>">
         <?php echo $_SESSION['message']['text']; ?>

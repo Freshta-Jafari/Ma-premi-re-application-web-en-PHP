@@ -26,6 +26,7 @@ session_start();
     </div>
     <?php unset($_SESSION['message']); ?>
 <?php endif; ?>
+
 <div>
     <form action="traitement.php?action=add" method="post" id="add">
         <label for="nom">Nom du produit : </label>
