@@ -26,19 +26,21 @@ session_start();
     </div>
     <?php unset($_SESSION['message']); ?>
 <?php endif; ?>
+<div>
+    <form action="traitement.php?action=add" method="post" id="add">
+        <label for="nom">Nom du produit : </label>
+        <input type="text" name="nom" id="nom" required><br>
 
-<form action="traitement.php" method="post">
-    <label for="nom">Nom du produit : </label>
-    <input type="text" name="nom" id="nom" required><br>
+        <label for="prix">Prix du produit :</label>
+        <input type="number" name="prix" id="prix" step="0.01" required><br>
 
-    <label for="prix">Prix du produit :</label>
-    <input type="number" name="prix" id="prix" step="0.01" required><br>
+        <label for="quantite">Quantité désirée :</label>
+        <input type="number" name="quantite" id="quantite" required><br>
 
-    <label for="quantite">Quantité désirée :</label>
-    <input type="number" name="quantite" id="quantite" required><br>
+        <button type="submit">Ajouter</button>
+    </form>
+</div>
 
-    <button type="submit">Ajouter</button>
-</form>
 
 </body>
 </html>
