@@ -111,10 +111,19 @@ if (isset($_GET['action'])) {
                         'text' => 'Quantité réduite.'
                     ];
                 } else {
-                    $_SESSION['message'] = [
-                        'type' => 'error',
-                        'text' => 'La quantité ne peut pas être inférieure à 1.'
-                    ];
+                    
+                        unset($_SESSION['produits'][$index]);
+                        $_SESSION['message'] = [
+                            'type' => 'success',
+                            'text' => 'Produit supprimé avec succès.'
+                        ];
+                        header("Location: recap.php");
+                        exit();
+                    
+                    // $_SESSION['message'] = [
+                    //     'type' => 'error',
+                    //     'text' => 'La quantité ne peut pas être inférieure à 1.'
+                    // ];
                 }
 
                 header("Location: recap.php");
